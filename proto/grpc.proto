@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package grpc;
+
+option go_package = "github.com/dmoyan0/TareasSD/proto";
+
+service WishListService {
+    rpc GetMunitionInfo(Empty) returns (MunitionInfoResponse);
+}
+
+message Empty {}
+
+message MunitionInfoResponse {
+    int32 municionAT = 1;
+    int32 municionMP = 2;
+    int32 maxAT = 3;
+    int32 maxMP = 4;
+}
